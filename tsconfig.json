@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "moduleResolution": "Node", // tive que adicionar isso para funcionar o firebase e ele encontrar a pasta
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": "./src" // coloquei isso para ele saber que as paginas estao em /src
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/components/countdown/Timer2.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
