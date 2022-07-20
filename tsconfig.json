@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/countdown/Timer2.jsx"  ],
+, "src/components/template/Navbar.jsx", "src/components/landing/SecaoBeneficios.jsx", "src/components/countdown/Timer2.jsx"  ],
   "exclude": [
     "node_modules"
   ]
