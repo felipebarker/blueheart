@@ -49,9 +49,10 @@ export default function SecaoCadastro() {
           {/* <h4 className="font-semibold text-gray-700 mt-5 mb-10">Conheça os benefícios do nosso ecossistema.</h4> */}
         </div>
         <div className='flex flex-col md:flex-row w-full items-start justify-center'>
-          {beneficios.map((val) => {
+          {beneficios.map((val, i) => {
             return (
               <div
+                key={i}
                 className='flex flex-col justify-center items-center w-fit md:w-1/3
               text-gray-100 mt-5 my-5 mx-0 md:mx-5 '
               >

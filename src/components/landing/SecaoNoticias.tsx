@@ -11,6 +11,7 @@ export default function SecaoNoticias() {
       <a
         href={link}
         target='_blank'
+        rel='noreferrer'
         className='hover:text-gray-100 font-mono [&_h3]:hover:underline'
       >
         <div

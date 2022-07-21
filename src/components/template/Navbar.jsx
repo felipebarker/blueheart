@@ -79,8 +79,9 @@ export default function Navbar() {
                 </div>
                 <div className="hidden sm:flex justify-center items-center w-[100%] ">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {navigation.map((item, i) => (
                       // ELEMENTOS DA NAVBAR (LINKS)
+                      <div key={i}>
                       <Link href={item.href}>
                       <a
                         key={item.name}
@@ -94,6 +95,7 @@ export default function Navbar() {
                       >
                         {item.name}
                       </a></Link>
+                      </div>
                     ))}
                   </div>
                 </div>

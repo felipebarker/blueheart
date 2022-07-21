@@ -116,9 +116,9 @@ export default function SecaoCadastro() {
                 className='md:text-8xl font-extrabold leading-tighter tracking-tighter mb-12 text-gray-100'
                 data-aos='zoom-y-out'
               >
-                Let's recreate music{' '}
+                Your ticket to the future of{' '}
                 <span className='bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-100'>
-                  together!
+                  music!
                 </span>
               </h1>
               <h3 className=' mb-8' data-aos='zoom-y-out' data-aos-delay='150'>
@@ -132,7 +132,7 @@ export default function SecaoCadastro() {
             </div>
 
             {/* Formulario de cadastro */}
-            <div className='rounded-xl shadow-inner shadow-blue-300 mx-auto sm:w-1/3 min-w-[350px] relative z-10 '>
+            <div className='rounded-xl  shadow-blue-300 mx-auto sm:w-1/3 min-w-[350px] relative z-10 '>
               <div
                 className='bg-black/75 px-4 py-4 rounded-xl justify-center items-center 
                 flex flex-col w-auto z-1'
