@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState, useEffect } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { BellIcon, MenuIcon, UserIcon, UsersIcon, XIcon } from '@heroicons/react/outline'
 import Banner from '../landing/Banner'
 import FormButton from '../controls/FormButton'
 import { useRouter } from 'next/router'
@@ -45,11 +45,11 @@ export default function Navbar() {
   return (
     <>
     <Disclosure as="nav" className={`fixed w-full z-30 transition duration-300 
-      ease-in-out ${top && 'bg-gray-900'} ${!top && 'bg-gray-900/40 backdrop-blur-sm shadow-lg'}`}>
+      ease-in-out ${top && 'bg-black'} ${!top && 'bg-black/40 backdrop-blur-sm shadow-lg'}`}>
       {({ open }) => (
         <>
-          <div className={`max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 `}>
-            <div className="relative flex items-center justify-between h-16">
+          <div className={`max-w-8xl mx-auto px-2 sm:px-6 lg:px-16 `}>
+            <div className="relative flex items-center justify-between h-36">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className={`inline-flex items-center justify-center p-2 rounded-md text-gray-400 
@@ -70,13 +70,14 @@ export default function Navbar() {
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                     alt="Workflow"
                   /> */}
-                  <img
-                    className="h-6 sm:h-8 w-auto mx-auto sm:block sm:mr-0"
+                  {/* <img
+                    className="h-6 sm:h-12 w-auto mx-auto sm:block sm:mr-0"
                     src="/images/logo.png"
                     alt="Workflow"
-                  />
+                  /> */}
+                  <h1 className='font-extrabold'>Festival<span className='text-blue-400'>NFT</span></h1>
                 </div>
-                <div className="hidden sm:block sm:ml-6">
+                <div className="hidden sm:flex justify-center items-center w-[100%] ">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       // ELEMENTOS DA NAVBAR (LINKS)
@@ -85,9 +86,9 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          location == item.href ? 'bg-transparent text-gray-100 border-b-2 border-cyan-600' 
+                          location == item.href ? 'bg-transparent text-gray-100 border-b-2 border-blue-600' 
                           : 'text-gray-300 ',
-                          'px-1 py-2 text-sm font-medium overflow-hidden shrink-0'
+                          'px-1 py-2 text-lg font-medium overflow-hidden shrink-0'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -98,38 +99,22 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* <button
+              <button
                   type="button"
-                  className="bg-gray-800 p-2 mx-2 rounded-md text-gray-400 
-                  hover:text-white focus:outline-none hover:bg-cyan-600
-                  focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                  onClick={() => {window.location.href='#cadastro'}}
-                > Cadastrar
-                  <span className="sr-only">View notifications</span>
-                </button> */}
-                <FormButton bgcolor='cyan' onClick={() => {window.location.href='#cadastro'}}
-                className='px-4 rounded-md mr-4'>Cadastrar</FormButton>
-                
-                <button
-                  type="button"
-                  className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white 
+                  className="bg-black p-1 border-2 border-transparent rounded-full text-gray-300 hover:text-white hover:border-white
                   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white
                   hidden md:block"
                 >
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  <BellIcon className="h-8 w-8 " aria-hidden="true" />
                 </button>
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="ml-3 relative">
+                <Menu as="div" className="ml-3 mr-8 relative">
                   <div>
-                    <Menu.Button className="bg-slate-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                    <Menu.Button className="bg-black flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                       <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="/images/avatar2.svg"
-                        alt=""
-                      />
+                      <UserIcon className="h-8 w-8 " aria-hidden="true"/>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -175,6 +160,19 @@ export default function Navbar() {
                     </Menu.Items>
                   </Transition>
                 </Menu>
+                {/* <button
+                  type="button"
+                  className="bg-gray-800 p-2 mx-2 rounded-md text-gray-400 
+                  hover:text-white focus:outline-none hover:bg-cyan-600
+                  focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                  onClick={() => {window.location.href='#cadastro'}}
+                > Cadastrar
+                  <span className="sr-only">View notifications</span>
+                </button> */}
+                <FormButton  onClick={() => {window.location.href='#cadastro'}}
+                className='scale-110 px-4 rounded-md mr-4'>Cadastrar</FormButton>
+                
+               
               </div>
             </div>
           </div>
