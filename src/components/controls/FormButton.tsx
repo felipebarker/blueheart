@@ -1,6 +1,6 @@
 interface FormButtonProps {
   className?: string;
-  bgcolor?: 'cyan' | 'lime' | '' | 'white';
+  bgcolor?: 'cyan' | 'lime' | '' | 'white' | 'blue';
   onClick?: (event: any) => void;
   children?: any;
   disabled?: boolean;
@@ -15,6 +15,8 @@ export default function FormButton(props: FormButtonProps) {
         return 'bg-cyan-600 hover:bg-cyan-500 hover:shadow-md hover:shadow-cyan-600/40';
       } else if (props.bgcolor === 'lime') {
         return 'bg-lime-600 hover:bg-gray-200 hover:border-white hover:text-gray-800';
+      } else if (props.bgcolor === 'blue') {
+        return 'bg-blue-400 hover:bg-blue-500 hover:border-white hover:text-gray-100';
       } else if (props.bgcolor === 'white') {
         return 'bg-gray-200 hover:bg-gray-100 text-gray-800 hover:shadow-md hover:shadow-gray-300/50';
       } else {

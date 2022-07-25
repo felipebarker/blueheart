@@ -24,7 +24,8 @@ export default function TokenInfo() {
 
   return (
     <Layout>
-      <section className='mt-36 relative flex flex-col space-y-2 w-full rounded-tl-xl justify-center items-start'>
+      <section className='mt-36 relative flex flex-col space-y-2 w-full rounded-tl-xl justify-center items-start 
+      px-5 lg:px-10'>
         <div
           className='flex flex-col md:flex-row items-start justify-center space-y-2 
                 md:space-x-2 md:space-y-0'
@@ -45,12 +46,12 @@ export default function TokenInfo() {
                   <h5 className='mr-3'>100</h5>
                   {nftCurtida ? (
                     <FaRegHeart
-                      className='cursor-pointer hover:text-cyan-500 '
+                      className='cursor-pointer hover:text-blue-500 '
                       onClick={() => setNftCurtida(!nftCurtida)}
                     ></FaRegHeart>
                   ) : (
                     <FaHeart
-                      className='cursor-pointer text-cyan-600 hover:text-cyan-500'
+                      className='cursor-pointer text-blue-600 hover:text-blue-500'
                       onClick={() => setNftCurtida(!nftCurtida)}
                     ></FaHeart>
                   )}
@@ -153,7 +154,7 @@ export default function TokenInfo() {
               </h3>
               <div className='flex flex-row w-full space-x-2'>
                 <FormButton
-                  bgcolor='cyan'
+                  bgcolor='blue'
                   className='items-center space-x-2 px-4 text-sm'
                 >
                   <FaWallet></FaWallet>

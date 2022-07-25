@@ -53,7 +53,7 @@ export default function FormInput(props: FormInputProps) {
           id={props.name}
           placeholder={props.placeholder}
           className={`mt-7 rounded-sm border-b-4 border-gray-400 outline-none p-1 bg-gray-200 
-                    peer mb-1 focus:border-cyan-600 focus:placeholder-transparen ${corTexto} ${props.className}`}
+                    peer mb-1 focus:border-blue-600 focus:placeholder-transparen ${corTexto} ${props.className}`}
           onChange={props.onChange}
           value={props.value}
           disabled={props.disabled}
