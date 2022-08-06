@@ -24,7 +24,7 @@ export default function Artista() {
   function renderTabs(){    
       return (
         <Tab.Group>
-          <Tab.List as='div' className={`mt-[50px] grid grid-cols-3 gap-10 w-full p-2 bg-neutral-900 rounded-2xl items-center justify-center`} 
+          <Tab.List as='div' className={`mt-[50px] grid grid-cols-3 gap-10 w-full p-2 bg-neutral-800 rounded-2xl items-center justify-center`} 
           style={{boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), 40px 40px 44px -20px rgba(0, 0, 0, 0.25)'}}>
             <div className=''></div>
             <Tab as={Fragment}>
@@ -53,10 +53,28 @@ export default function Artista() {
           </Tab>
 
           </Tab.List>
-          <Tab.Panels>
-            <Tab.Panel>Content 1</Tab.Panel>
-            <Tab.Panel>Content 2</Tab.Panel>
-            <Tab.Panel>Content 3</Tab.Panel>
+          <Tab.Panels as='div' className='flex flex-col w-full mt-10'>
+            <Tab.Panel as='ul' className='flex w-full flex-col space-x-0 space-y-10 items-start justify-start h-full'>
+                <li className='flex flex-row w-full h-[250px] p-2 bg-neutral-800 rounded-2xl 
+                '>
+                  
+                  <img src='/images/token-info/tour-comuna-13.jpg' className='h-full rounded-2xl aspect-square'/>
+                  <div className='block ml-5 w-full h-full border-white justify-start rounded-2xl p-5 bg-transparent space-y-2'>
+                    {/* <h6 className='px-2 py-1 bg-blue-400 w-fit rounded-full text-neutral-800 border-blue-600 border-2'>Música</h6> */}
+                    <h6 className='text-blue-600'>Música</h6>
+                    <h2 className='w-full'>Comuna 13</h2> 
+                  </div>
+                </li>
+
+                <li className='flex flex-row w-full h-[250px]'>
+                  <img src='/images/token-info/psico2.jfif' className='h-full rounded-2xl aspect-square'/>
+                  <div className='block ml-5 w-full h-full border-white justify-start rounded-2xl p-5 bg-neutral-800 space-y-2'>
+                    <h6 className='text-blue-600'>Arte</h6>
+                    <h2 className='w-full'>Comuna 13</h2>
+                  </div>
+                </li>
+            </Tab.Panel>
+            <Tab.Panel as='div'>NFT Tickets</Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
       )
@@ -94,7 +112,7 @@ export default function Artista() {
       <section className='relative flex flex-col flex-grow w-full rounded-tl-xl justify-start items-center bg-black
       h-full px-[80px]'>
         <div style={{boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), 40px 40px 44px -20px rgba(0, 0, 0, 0.25)'}} 
-        className='flex flex-row drop bg-neutral-900 w-full h-[250px] mt-[65px] p-[50px] rounded-2xl'>
+        className='flex flex-row drop bg-neutral-800 w-full h-[250px] mt-[65px] p-[50px] rounded-2xl'>
             <h3 className='w-[50%] font-[18px]'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
             </h3>
@@ -116,8 +134,8 @@ export default function Artista() {
         </div>
       </section>
 
-      <section className='relative flex flex-col flex-grow w-full rounded-tl-xl justify-start items-center 
-      h-full px-[80px] bg-black'>
+      <section className='flex flex-col rounded-tl-xl justify-start items-center 
+      px-[80px] h-full w-full'>
         {renderTabs()}
       </section>
 

@@ -24,7 +24,7 @@ export default function Navbar() {
   const navigation = [
     { name: 'Inicial', href: '/', current: true },
     { name: 'Detalhes Token', href: '/token-info', current: false },
-    { name: 'Benefícios', href: '#beneficios', current: false },
+    { name: 'Artista', href: '/artista', current: false },
     { name: 'Fale conosco', href: '#fale-conosco', current: false },
     // { name: 'Calendar', href: '#', current: false },
   ]
