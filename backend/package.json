@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@strapi/plugin-graphql": "^4.0.0",
+    "@strapi/plugin-graphql": "^4.0.5",
+    "fs-extra": "^10.0.0",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
     "@strapi/strapi": "4.3.2",
@@ -8,7 +9,7 @@
     "@strapi/plugin-i18n": "4.3.2",
     "better-sqlite3": "7.4.6"
   },
-  "name": "my-app-name",
+  "name": "backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -23,8 +24,8 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "03eea9d2-fcfa-4246-ab20-5b61bd1ed4aa",
-    "template": "ecommerce"
+    "uuid": "60f3a363-4a6a-4d70-a31c-d86ea9f01279",
+    "template": "blog"
   },
   "engines": {
     "node": ">=12.x.x <=16.x.x",
